@@ -1,0 +1,9 @@
+services:
+  ab:
+    # command: /build/ab -c 16 -k -n 1000 -A BDMS_PLATFORM:password -L /tmp/urls.txt > /tmp/results.txt
+    command: tail -f /etc/os-release
+    container_name: ab
+    hostname: ab
+    image: apachebench-for-multi-url
+    volumes:
+      - .:/tmp
